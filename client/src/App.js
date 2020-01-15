@@ -2,8 +2,7 @@ import React from 'react';
 import './App.css';
 import Contact from './component/contact';
 
-import Modif from './component/update';
-import Delete from './component/delete';
+import Routeur from './routeur/index';
 
 function App() {
   return (
@@ -12,7 +11,9 @@ function App() {
         <h1>Contact APP</h1>
         <div className="button">
         <Contact/>
-       
+        
+        <Routeur/>
+    
         </div>
        
       </header>

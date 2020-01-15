@@ -7,15 +7,16 @@ class Modif extends Component {
     
         this.state = {
             contact: {
-                "nom": "test4444",
-                "telephone": 85963214,
-                "mail":"ppppp@ffff.ff"
+                "nom": "",
+                "telephone": "",
+                "mail":""
             }
         }
     }
 
     clickHandleUpdate = () => {
-         Axios.put('http://localhost:8080/contacts/5e1cdff167aa77207080e8b2',
+        let id = this.props.id
+         Axios.put(`http://localhost:8080/contacts/${id}`,
            this.state.contact )
           .then(function (response) {
             console.log("modif sucess");

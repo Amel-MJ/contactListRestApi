@@ -10,10 +10,12 @@ class Delete extends Component {
         }
         
     }
-   
-    clickHandleDelete = (id) => {
+    
+
+    clickHandleDelete = () => {
+      let id = this.props.id
       console.log(id)
-      Axios.delete(`http://localhost:8080/contact/${id}`)
+      Axios.delete(`http://localhost:8080/contacts/${id}`)
           .then(function (response) {
             console.log("delete sucess");
           })
