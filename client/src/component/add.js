@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import { Redirect } from 'react-router-dom'
 
 class Add extends Component {
   constructor(props) {
@@ -10,7 +11,8 @@ class Add extends Component {
         nom: "",
         telephone: "",
         mail: ""
-      }
+      },
+      redirection: false 
     };
     
   }
@@ -20,13 +22,8 @@ class Add extends Component {
     Axios.post("http://localhost:8080/contacts",this.state.contact)
       .then(response => {
         console.log("ajoute sucess");
-        this.setState({
-          contact: {
-            nom: "",
-            telephone: "",
-            mail: ""
-          }
-        })
+
+        this.setState({ redirection: true })
       })
       .catch(function(error) {
         console.log(error);
@@ -34,6 +31,11 @@ class Add extends Component {
   };
 
   render() {
+    const { redirection } = this.state;
+  if (redirection) {
+   //Affichage de la redirection
+   return <Redirect to='/'/>;
+}
     
     return (
       <div className="add">

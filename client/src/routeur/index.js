@@ -6,6 +6,7 @@ import Contact from "../component/contact";
 import Add from "../component/add";
 import Update from "../component/update";
 import Delete from "../component/delete";
+import Home from "../component/home";
 
 export default class index extends Component {
   render() {
@@ -14,10 +15,11 @@ export default class index extends Component {
         <Router>
 
           <Switch>
-            <Route  path="/" component={Contact}/>
-            <Route  path="/contacts/" component={Add} />
-            <Route  path="/contacts/:id" component={Update} />
-            <Route  path="/contacts/:id" component={Delete}/>
+            <Route  path="/" component={Home} />
+            <Route  path="/AddContacts" component={Add} />
+            <Route  path="/Contacts/:id" component={Update} />
+            <Route  path="/Contacts/:id" component={Delete}/>
+            <Route  path="/Contacts" component={Contact}/>
           </Switch>
         </Router>
       </div>

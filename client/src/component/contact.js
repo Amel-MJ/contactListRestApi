@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Axios from "axios";
-import Add from "./add";
+
 import Modif from "./update";
 import Delete from "./delete";
-import { Link } from "react-router-dom";
+
 
 class contact extends Component {
   constructor(props) {
@@ -49,9 +49,8 @@ class contact extends Component {
     ));
     return (
       <div>
-        <Link to={`/`} > <button >Contact List</button></Link>
-        <Link to={`/Contacts/`}><button >ADD</button></Link>
-   
+        
+         {contactItems}
       </div>
     );
   }
