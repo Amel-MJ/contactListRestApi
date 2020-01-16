@@ -65,9 +65,12 @@ class contact extends Component {
      
     ));
     return (
+      <div>
+      <h2>Contact List</h2>
       <div className="contactList">
-        
+       
          {contactItems}
+      </div>
       </div>
     );
   }

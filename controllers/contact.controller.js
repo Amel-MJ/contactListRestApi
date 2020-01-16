@@ -3,8 +3,8 @@ const Contact = require('../models/contact.model');
 // Create and Save a new Contact
 exports.create = (req, res) => {
     // Validate request
-    console.log(req.body.nom)
-    if(!req.body.nom) {
+    console.log()
+    if(req.body.nom == "" || req.body.telephone == "" || req.body.mail == "") {
         return res.status(400).send({
             message: "aucun contact"
         });
@@ -65,7 +65,7 @@ exports.findOne = (req, res) => {
 // Update a contact identified by the contactId in the request
 exports.update = (req, res) => {
     // Validate Request
-    if(!req.body.nom) {
+    if(req.body.nom == "" || req.body.telephone == "" || req.body.mail == "") {
         return res.status(400).send({
             message: "Body can not be empty"
         });

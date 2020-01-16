@@ -40,7 +40,7 @@ class Add extends Component {
     
     return (
       <div className="add">
-        <h3>Add Contact Page</h3>
+        <h2>Add Contact Page</h2>
         <p>Contact Name</p>
         <input
           value={this.state.contact.nom}
