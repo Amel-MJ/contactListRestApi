@@ -8,18 +8,18 @@ import Update from "../component/update";
 import Delete from "../component/delete";
 import Home from "../component/home";
 
-export default class index extends Component {
+export default class Index extends Component {
   render() {
     return (
       <div>
         <Router>
 
           <Switch>
-            <Route  path="/" component={Home} />
-            <Route  path="/AddContacts" component={Add} />
-            <Route  path="/Contacts/:id" component={Update} />
-            <Route  path="/Contacts/:id" component={Delete}/>
-            <Route  path="/Contacts" component={Contact}/>
+            <Route exact path="/update/:id" component={Update} /> 
+            <Route exact path="/DeleteContacts/:id" component={Delete}/>
+            <Route exact path="/AddContacts" component={Add} />
+            <Route  exact path="/Contacts" component={Contact}/>
+            <Route exact path="/" component={Home} />
           </Switch>
         </Router>
       </div>

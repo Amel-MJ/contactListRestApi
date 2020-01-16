@@ -16,7 +16,8 @@ class Add extends Component {
     };
     
   }
-
+ 
+   
   clickHandleAdd = () => {
     console.log(this.state.contact)
     Axios.post("http://localhost:8080/contacts",this.state.contact)
@@ -29,12 +30,12 @@ class Add extends Component {
         console.log(error);
       });
   };
-
+  
   render() {
     const { redirection } = this.state;
   if (redirection) {
    //Affichage de la redirection
-   return <Redirect to='/'/>;
+   return <Redirect to='/Contacts'/>;
 }
     
     return (
